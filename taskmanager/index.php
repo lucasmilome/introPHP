@@ -15,15 +15,17 @@
             <input type="text" name="task-text" id="task-input"> 
             <button type="submit" class="add-button">Adicionar</button>
         </form>                        
-        <?php if (isset($_SESSION["tasks"])): ?>
-            <?php foreach ($_SESSION["tasks"] as $task): ?>
-                <div style="padding-top: 10px;">
-                    <small><?php echo $task["description"]; ?></small>
-                </div>
-            <?php endforeach ?> 
-        <?php else: ?> 
-            <p><?php echo $message; ?></p>
-        <?php endif ?>
+        <div class="task-list">
+            <?php if (empty($_SESSION["task"])): ?>
+                <p style="text-align: center; color: #6b7280">Nenhuma tarefa adicionada ainda</p>
+            <?php else: ?>
+                <?php foreach ($_SESSION["tasks"] as $task): ?>
+                    <div class="task-item <?php echo $task["completed"] ? "completed" : "uncompleted"; ?>">
+
+                    </div>
+                <?php endforeach ?>
+            <?php endif ?>    
+        </div>
     </div>
 </body>
 </html>
