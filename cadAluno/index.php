@@ -23,7 +23,7 @@
                 <input type="email" id="email" name="email" required>
                 <span id="emailError" class="error-message">Por favor, insira um e-mail válido.</span>
             </div>
-            <div>
+            <div class="form-group">
                 <label for="course">Curso:</label>
                 <input type="text" name="course" id="course" required>
                 <span id="courseError" class="error-message">Por favor, insira o curso.</span>
