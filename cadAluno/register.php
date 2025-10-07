@@ -30,4 +30,11 @@ if ($request_method === "POST") {
     header("Location: " . $_SERVER["PHP_SELF"]);
     exit;
 }
+
+if (isset($_GET["action"]) && $_GET(["action"]) === "clear") {
+    unset($_SESSION["students"]);
+
+    header("Location: " . $_SERVER["PHP_SELF"]);
+    exit;
+}
 ?>
