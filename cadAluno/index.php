@@ -15,12 +15,12 @@
         <form id="studentForm" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"])?>">
             <div class="form-group">
                 <label for="">Nome do Aluno:</label>
-                <input type="text" name="name" required>
-                <span id="nameError" class="error-name">Por favor, insira o nome.</span>
+                <input type="text" name="name" id="name" required>
+                <span id="nameError" class="error-message">Por favor, insira o nome.</span>
             </div>
             <div class="form-group">
                 <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" name="email" id="email" required>
                 <span id="emailError" class="error-message">Por favor, insira um e-mail válido.</span>
             </div>
             <div class="form-group">

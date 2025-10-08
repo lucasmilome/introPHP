@@ -21,4 +21,18 @@ document.getElementById("studentForm").addEventListener("submit", function(event
     } else {
         emailError.style.display = "none";
     }
+
+    const courseInput = document.getElementById("course");
+    const courseError = document.getElementById("courseError");
+
+    if (courseInput.value.trim() === "") {
+        courseError.style.display = "block";
+        isValid = false;
+    } else {
+        courseError.style.display = "none";
+    }
+
+    if (!isValid) {
+        event.preventDefault();
+    }
 });

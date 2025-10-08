@@ -3,7 +3,7 @@
 session_start();
 
 // Garante que a lista de alunos na sessão seja um array, mesmo que vazia.
-if (isset($_SESSION["students"])) {
+if (!isset($_SESSION["students"])) {
     $_SESSION["students"] = [];
 }
 
@@ -31,7 +31,7 @@ if ($request_method === "POST") {
     exit;
 }
 
-if (isset($_GET["action"]) && $_GET(["action"]) === "clear") {
+if (isset($_GET["action"]) && $_GET["action"] === "clear") {
     unset($_SESSION["students"]);
 
     header("Location: " . $_SERVER["PHP_SELF"]);
