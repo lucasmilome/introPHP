@@ -67,3 +67,49 @@ h1, h2 {
 .btn:hover {
     background-color: #0056b3;
 }
+
+.student-list {
+    margin-top: 30px;
+}
+
+.student-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.student-list th,
+.student-list td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.student-list th {
+    background-color: #f8f9fa;
+}
+
+.empty-message {
+    text-align: center;
+    color: #777;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+}
+
+.clear-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #dc3545;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.clear-link:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 0.9em;
+    display: none;
+}

@@ -47,9 +47,11 @@
                     </thead>
                     <tbody>
                         <?php foreach ($_SESSION["students"] as $student): ?>
-                            <tr><?php echo $student["name"]; ?></tr>
-                            <tr><?php echo $student["email"]; ?></tr>
-                            <tr><?php echo $student["course"]; ?></tr>
+                            <tr>
+                                <td><?php echo $student["name"]; ?></td>
+                                <td><?php echo $student["email"]; ?></td>
+                                <td><?php echo $student["course"]; ?></td>
+                            </tr>
                         <?php endforeach; ?>
                     </tbody>
                 </table>
@@ -57,5 +59,6 @@
             <?php endif; ?>
         </div>
     </main>
+    <script src="./js/script.js"></script>
 </body>
 </html>
